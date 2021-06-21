@@ -1,0 +1,31 @@
+<div class="modal fade" id="<%= dom_id %>" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <% if header %>
+        <div class="modal-header">
+          <%= header %>
+          <%- if header_close_btn %>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fa fa-times-circle"></i>
+            </button>
+          <%- end %>
+        </div>
+      <% end %>
+      <div class="modal-body">
+        <%= content %>
+      </div>
+      <% if footer %>
+        <div class="modal-footer">
+          <%= footer %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  console.log("Hi!")
+  new bsModal(document.getElementById("<%= dom_id %>"))
+</script>
+
